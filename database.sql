@@ -45,3 +45,19 @@ WHERE name = 'Kelsey';
 UPDATE users
 SET score = 9
 WHERE name='Jordan' OR name='Axel';
+
+-- Add one more user with score
+INSERT INTO users(name, age, DOB, score)
+VALUES('Lulu', 10, '1999-03-29', 8);
+
+-- SELECT all users that names start with A
+SELECT * FROM users WHERE name LIKE 'A%';
+
+-- SELECT all users that names end with y
+SELECT * FROM users WHERE name LIKE '%y';
+
+-- Organize all the rows in descending order
+SELECT * FROM users ORDER BY score DESC;
+
+-- Organize all the rows in ascending order
+SELECT * FROM users ORDER BY score ASC;
