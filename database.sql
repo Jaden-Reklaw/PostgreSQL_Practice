@@ -15,3 +15,8 @@
 -- Create your first table
 CREATE TABLE users (name text, age smallint, DOB date);
 
+-- After the table is created do \d to see the list of relations
+\d
+
+-- To exit the terminal sql interface do \q
+\q
