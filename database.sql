@@ -61,3 +61,11 @@ SELECT * FROM users ORDER BY score DESC;
 
 -- Organize all the rows in ascending order
 SELECT * FROM users ORDER BY score ASC;
+
+-- SQL FUNCTIONS
+--Average score column
+SELECT AVG(score) FROM users;
+-- Sum of score column
+SELECT SUM(score) FROM users;
+-- Get the number of users in the database
+SELECT COUNT(name) from users;
