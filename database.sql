@@ -69,3 +69,32 @@ SELECT AVG(score) FROM users;
 SELECT SUM(score) FROM users;
 -- Get the number of users in the database
 SELECT COUNT(name) from users;
+
+-- Primary and Foreign Keys
+-- Primary keys identify a unique value in one table
+-- Foreign key is a primary key from another table
+
+CREATE TABLE login (
+    ID SERIAL NOT NULL PRIMARY KEY,
+    secret VARCHAR(120) NOT NULL,
+    name TEXT UNIQUE NOT NULL
+);
+
+-- UNIQUE for name means you can't enter the same name twice
+-- NOT NULL means the row can't have that field empty
+
+-- Insert some new values and notice you don't have
+-- to specify the id since it's auto created
+INSERT INTO login(secret, name) VALUES
+('abc', 'Jordan'),
+('xyz', 'Kelsey'),
+('123', 'Axel');
+
+-- JOIN allows you to connect tables in SQL through relations
+-- Tables should only have information specific to that table
+-- Connect them with a primary key on one table that is a foreign
+-- key on another table
+
+-- name column on the user table is the primary key
+-- name on the login table is a foreign key and connects the two tables
+SELECT * FROM users JOIN login ON users.name = login.name;
