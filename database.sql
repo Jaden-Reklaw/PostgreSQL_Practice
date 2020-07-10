@@ -98,3 +98,12 @@ INSERT INTO login(secret, name) VALUES
 -- name column on the user table is the primary key
 -- name on the login table is a foreign key and connects the two tables
 SELECT * FROM users JOIN login ON users.name = login.name;
+
+
+-- How to Delete a row from a table
+DELETE FROM users WHERE name='Lulu';
+
+-- How to remove all the table
+DROP TABLE login;
+
+DROP TABLE users;
